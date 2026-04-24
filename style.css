@@ -2,99 +2,99 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    background-color: rgb(28, 43, 51);
     font-family: Arial, sans-serif;
 }
 
-#instagram{
-    display:flex;
-    align-items:center;
-    flex-direction:column;
-    padding: 10px;
+/* Background gradient (important for insta feel) */
+body{
+    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+    color: white;
 }
 
-/* Language text */
+/* Main container */
+#instagram{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Language */
 #eng{
-    color:white;
-    margin-top:10px;
     font-size:14px;
+    opacity:0.8;
+    margin-bottom:30px;
 }
 
 /* Logo */
 #logo img{
-    margin-top:40px;
-    height:90px;
+    height:70px;
+    margin-bottom:30px;
 }
 
-/* Inputs */
+/* Input fields */
 .inp{
+    width:100%;
+    max-width:350px;
     height:50px;
-    width:90%;              /* ✅ responsive */
-    max-width:400px;       /* ✅ limit on large screens */
-    border-radius:20px;
-    border:0.5px solid white;
-    color:white;
     margin:8px 0;
-    padding: 0 15px;
-    background-color: transparent;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.4);
+    padding:0 15px;
+    background: transparent;
+    color:white;
+    outline:none;
+}
+
+/* Placeholder color */
+.inp::placeholder{
+    color: rgba(255,255,255,0.6);
 }
 
 /* Button */
 #button{
-    height:45px;
-    width:90%;
-    max-width:400px;
+    width:100%;
+    max-width:350px;
+    height:50px;
     margin-top:15px;
-    border-radius:20px;
-    color:white;
-    background-color:rgb(0, 100, 224);
+    border-radius:25px;
     border:none;
+    background: #1877f2;
+    color:white;
     font-size:16px;
+    font-weight:bold;
 }
 
 /* Forgot password */
 #forget{
-    color:white;
     margin-top:20px;
     font-size:14px;
+    opacity:0.8;
 }
 
-/* Create account */
+/* Create account button */
 #create{
-    height:45px;
-    width:90%;
-    max-width:400px;
-    margin-top:60px;
-    color:rgb(0, 100, 224);
-    text-align:center;
-    border:1px solid rgb(0, 100, 224);
-    border-radius:20px;
-    font-size:16px;
+    width:100%;
+    max-width:350px;
+    height:50px;
+    margin-top:40px;
+    border-radius:25px;
+    border:1px solid #1877f2;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
+    color:#1877f2;
+    font-weight:500;
 }
 
+/* Meta logo */
 #meta{
-    margin-top:80px;
+    margin-top:50px;
 }
 
-/* 📱 Extra small devices */
-@media (max-width: 480px) {
-    #logo img{
-        height:70px;
-    }
-
-    .inp{
-        height:45px;
-    }
-
-    #button{
-        height:42px;
-    }
-
-    #create{
-        height:42px;
-        font-size:14px;
-    }
+#meta img{
+    height:20px;
+    opacity:0.7;
 }
