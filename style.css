@@ -1,43 +1,6 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Background gradient (important for insta feel) */
-body{
-    background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
-    color: white;
-}
-
-/* Main container */
-#instagram{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    min-height:100vh;
-    padding:20px;
-}
-
-/* Language */
-#eng{
-    font-size:14px;
-    opacity:0.8;
-    margin-bottom:30px;
-}
-
-/* Logo */
-#logo img{
-    height:70px;
-    margin-bottom:30px;
-}
-
-/* Input fields */
+/* Inputs */
 .inp{
-    width:100%;
-    max-width:350px;
+    width:80%;        /* 👈 main change */
     height:50px;
     margin:8px 0;
     border-radius:25px;
@@ -48,36 +11,22 @@ body{
     outline:none;
 }
 
-/* Placeholder color */
-.inp::placeholder{
-    color: rgba(255,255,255,0.6);
-}
-
 /* Button */
 #button{
-    width:100%;
-    max-width:350px;
+    width:80%;        /* 👈 main change */
     height:50px;
     margin-top:15px;
     border-radius:25px;
     border:none;
-    background: #1877f2;
+    background:#1877f2;
     color:white;
     font-size:16px;
     font-weight:bold;
 }
 
-/* Forgot password */
-#forget{
-    margin-top:20px;
-    font-size:14px;
-    opacity:0.8;
-}
-
-/* Create account button */
+/* Create account */
 #create{
-    width:100%;
-    max-width:350px;
+    width:80%;        /* 👈 same feel */
     height:50px;
     margin-top:40px;
     border-radius:25px;
@@ -86,15 +35,4 @@ body{
     align-items:center;
     justify-content:center;
     color:#1877f2;
-    font-weight:500;
-}
-
-/* Meta logo */
-#meta{
-    margin-top:50px;
-}
-
-#meta img{
-    height:20px;
-    opacity:0.7;
 }
